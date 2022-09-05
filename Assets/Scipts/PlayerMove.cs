@@ -53,4 +53,16 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "Elevator"){
+            transform.parent = collision.gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.tag == "Elevator"){
+            transform.parent = null;
+        }
+    }
 }
