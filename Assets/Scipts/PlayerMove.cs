@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     Vector2 mousePosition;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
     void Update()
     {
@@ -23,7 +25,7 @@ public class PlayerMove : MonoBehaviour
 
         walk_jump.SetFloat("Movement", Mathf.Abs(horizontal));
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded()) 
         {
             rb.velocity = new Vector2(rb.velocity.x, 15f);
             walk_jump.SetBool("is_Jump", true);
@@ -52,6 +54,10 @@ public class PlayerMove : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private bool isGrounded(){
+        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
     }
 
     private void OnCollisionEnter2D(Collision2D collision){

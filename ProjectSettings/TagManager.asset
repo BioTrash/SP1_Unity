@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Weapon
   - Elevator
+  - Coins
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
