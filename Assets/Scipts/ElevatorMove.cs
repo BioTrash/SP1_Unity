@@ -11,12 +11,6 @@ public class ElevatorMove : MonoBehaviour
     private bool isElevatorDown = true;
     private bool isElevatorSideDown = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
