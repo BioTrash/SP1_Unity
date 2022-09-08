@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         Flip();
+
     }
 
     private void FixedUpdate()
@@ -57,7 +59,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     private bool isGrounded(){
-        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
