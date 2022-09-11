@@ -18,7 +18,7 @@ public class ElevatorMove : MonoBehaviour
     }
 
     void StartElevator(){
-        if(Vector2.Distance(player.position, elevatorSwitch.position)<3f /*&& Input.GetKeyDown("e")*/){
+        if(Vector2.Distance(player.position, elevatorSwitch.position)<5f){
             if(transform.position.y <= downPos.position.y){
                 isElevatorDown = true;
                 isElevatorSideDown = true;

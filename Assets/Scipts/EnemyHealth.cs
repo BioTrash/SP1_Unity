@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        localScale.x = Convert.ToSingle(EnemyDamage.HP);
+        localScale.x = Convert.ToSingle(EnemyMove.HP);
         transform.localScale = localScale;
     }
 }

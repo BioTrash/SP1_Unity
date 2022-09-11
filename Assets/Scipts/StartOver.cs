@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class StartOver : MonoBehaviour
 {
     public void ReplayGame(){
-        SceneManager.LoadScene("Game");
-        EnemyDamage.HP = 1;
+        SceneManager.LoadScene(PlayerMove.lastScene);
+        EnemyMove.HP = 1;
         PlayerMove.isFacingRight = true;
     }
 }

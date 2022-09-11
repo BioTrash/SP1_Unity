@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 1c6f30dd13344fefcb8f088e9efab9fc
+  - enabled: 1
+    path: Assets/Scenes/MoonStage.unity
+    guid: ce95d89ff8d19a8dc8b3a0f8c69a935a
   m_configObjects: {}
